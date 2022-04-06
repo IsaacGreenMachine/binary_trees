@@ -1,10 +1,10 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_height - walks through tree using postorder
+ * binary_tree_height - finds height of node
  * @tree: head of the tree
  *
- * Return: height of tree
+ * Return: height of node
  */
 size_t binary_tree_height(const binary_tree_t *tree)
 {

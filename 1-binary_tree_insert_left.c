@@ -15,6 +15,11 @@ node->parent = parent;
 node->n = value;
 node->left = NULL;
 node->right = NULL;
+if (parent != NULL)
+{
+if (parent->left != NULL)
+node->left = parent->left;
 parent->left = node;
+}
 return (node);
 }

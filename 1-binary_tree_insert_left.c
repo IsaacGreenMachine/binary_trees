@@ -18,7 +18,10 @@ node->right = NULL;
 if (parent != NULL)
 {
 if (parent->left != NULL)
+{
+parent->left->parent = node;
 node->left = parent->left;
+}
 parent->left = node;
 }
 return (node);

@@ -80,7 +80,18 @@ return (0);
  */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
+int out_l;
+int out_r;
 if (!binary_tree_balance(tree) && binary_tree_is_full(tree))
+{
+if (tree->left)
+{
+out_l = binary_tree_is_perfect(tree->left);
+out_r = binary_tree_is_perfect(tree->right);
+if (out_l == 0 || out_r == 0)
+return (0);
+}
 return (1);
+}
 return (0);
 }

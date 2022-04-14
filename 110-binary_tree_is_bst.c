@@ -21,13 +21,13 @@ int check_bst(const binary_tree_t *tree)
 int flag = 0;
 if (tree->right)
 {
-if (bst_find_min(tree->right) < tree->n)
+if (bst_find_min(tree->right) <= tree->n)
 return (-1);
 flag += check_bst(tree->right);
 }
 if (tree->left)
 {
-if (bst_find_max(tree->left) > tree->n)
+if (bst_find_max(tree->left) >= tree->n)
 return (-1);
 flag += check_bst(tree->left);
 }

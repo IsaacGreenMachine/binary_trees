@@ -74,14 +74,14 @@ int right;
 if (tree->left)
 {
 left = bst_find_max(tree->left);
-if (left < max)
+if (left > max)
 max = left;
 }
 
 if (tree->right)
 {
 right = bst_find_max(tree->right);
-if (right < max)
+if (right > max)
 max = right;
 }
 
